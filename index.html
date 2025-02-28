@@ -38,14 +38,13 @@
     </header>
 
     <!-- main section  -->
-    <main>
+    <main class="md:mt-2">
         <div class="container mx-auto">
-            <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-5">
                 <!-- left -->
                 <section class="col-span-3 bg-white py-6 rounded-xl">
                     <!-- task head -->
-                    <div
-                        class="grid lg:grid-cols-4 grid-cols-1 gap-4 border-b-2 border-[#3752FD33] border-dashed pb-5 px-6 md:pb-8">
+                    <div class="grid lg:grid-cols-4 grid-cols-1 gap-4  pb-5 px-6 md:pb-8">
                         <!-- task assigned -->
                         <div
                             class="bg-[#F4F7FF] px-4 md:px-0  py-4 rounded-xl flex gap-6 sm:gap-0 justify-start md:justify-evenly items-center">
@@ -77,6 +76,7 @@
                         </div>
 
                     </div>
+                    <hr class="border-dashed border-[1.5px] text-[#3752FD33]">
 
                     <!-- task body  All Card -->
                     <div class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-5 px-6 mt-5 md:mt-8">
@@ -84,7 +84,8 @@
                         <div class="bg-[#F4F7FF] p-6 rounded-xl space-y-4">
                             <span
                                 class="tag bg-white px-4 py-2 rounded-lg text-base font-normal text-[#00303C]">ShopEase</span>
-                            <h3 class="text-2xl font-medium text-[#00303C] mt-4">Fix Mobile Button Issue</h3>
+                            <h3 id="mobile-text" class="text-2xl font-medium text-[#00303C] mt-4">Fix Mobile Button
+                                Issue</h3>
                             <div class="bg-white p-4 rounded-xl">
                                 <p class="text-base font-normal">The mobile button was unresponsive due to a JavaScript
                                     event listener issue, requiring a quick fix to ensure seamless user interaction
@@ -104,7 +105,7 @@
                         <div class="bg-[#F4F7FF] p-6 rounded-xl space-y-4">
                             <span
                                 class="tag bg-white px-4 py-2 rounded-lg text-base font-normal text-[#00303C]">CloudSync</span>
-                            <h3 class="text-2xl font-medium text-[#00303C] mt-4">Add Dark Mode</h3>
+                            <h3 id="dark-text" class="text-2xl font-medium text-[#00303C] mt-4">Add Dark Mode</h3>
                             <div class="bg-white p-4 rounded-xl">
                                 <p class="text-base font-normal">Implementing a dark mode feature enhances user
                                     experience by reducing eye strain, improving readability, and providing a sleek,
@@ -124,7 +125,8 @@
                         <div class="bg-[#F4F7FF] p-6 rounded-xl space-y-4">
                             <span
                                 class="tag bg-white px-4 py-2 rounded-lg text-base font-normal text-[#00303C]">SwiftPay</span>
-                            <h3 class="text-2xl font-medium text-[#00303C] mt-4">Optimize Home page</h3>
+                            <h3 id="optimize-text" class="text-2xl font-medium text-[#00303C] mt-4">Optimize Home page
+                            </h3>
                             <div class="bg-white p-4 rounded-xl">
                                 <p class="text-base font-normal">Enhancing the home page improves loading speed, user
                                     engagement, and accessibility by optimizing images, reducing unused scripts, and
@@ -144,7 +146,7 @@
                         <div class="bg-[#F4F7FF] p-6 rounded-xl space-y-4">
                             <span
                                 class="tag bg-white px-4 py-2 rounded-lg text-base font-normal text-[#00303C]">Meta</span>
-                            <h3 class="text-2xl font-medium text-[#00303C] mt-4">Add new emoji 🤲</h3>
+                            <h3 id="emoji-text" class="text-2xl font-medium text-[#00303C] mt-4">Add new emoji 🤲</h3>
                             <div class="bg-white p-4 rounded-xl">
                                 <p class="text-base font-normal">Integrating new emojis enhances user interaction,
                                     making conversations more expressive, engaging, and visually appealing across
@@ -164,7 +166,7 @@
                         <div class="bg-[#F4F7FF] p-6 rounded-xl space-y-4">
                             <span
                                 class="tag bg-white px-4 py-2 rounded-lg text-base font-normal text-[#00303C]">GoogleLLC</span>
-                            <h3 class="text-2xl font-medium text-[#00303C] mt-4">Integrate OpenAI API</h3>
+                            <h3 id="ai-text" class="text-2xl font-medium text-[#00303C] mt-4">Integrate OpenAI API</h3>
                             <div class="bg-white p-4 rounded-xl">
                                 <p class="text-base font-normal">Integrating the OpenAI API enables AI-powered features,
                                     enhancing automation, natural language processing, and interactive user experiences.
@@ -184,7 +186,7 @@
                         <div class="bg-[#F4F7FF] p-6 rounded-xl space-y-4">
                             <span
                                 class="tag bg-white px-4 py-2 rounded-lg text-base font-normal text-[#00303C]">GlassDoar</span>
-                            <h3 class="text-2xl font-medium text-[#00303C] mt-4">Improve Job Seeking</h3>
+                            <h3 id="job-text" class="text-2xl font-medium text-[#00303C] mt-4">Improve Job Seeking</h3>
                             <div class="bg-white p-4 rounded-xl">
                                 <p class="text-base font-normal">Finding a developer job requires a strong portfolio,
                                     networking, and consistently applying to opportunities on job platforms,company,
@@ -210,13 +212,20 @@
                     <aside class="bg-white py-5 rounded-xl h-full">
                         <div>
                             <!-- activity head -->
-                            <div class=" border-b-2 border-[#3752FD33] border-dashed pb-5 space-y-5 text-center">
+                            <div class="pb-4 space-y-5 text-center">
                                 <div class="flex gap-3 justify-center">
                                     <img src="assets/activity.svg" alt="activity icon">
                                     <h4 class="">Activity Log</h4>
                                 </div>
-                                <div><button class="btn text-white text-base rounded-md bg-[#3752FD]">Clear
+                                <div><button onclick="clearHistory()"
+                                        class="btn text-white text-base rounded-md bg-[#3752FD]">Clear
                                         History</button></div>
+                                <hr class="border-dashed border-[1.4px] text-[#3752FD33]">
+
+                                <div id="logContainer" class="new-history grid gap-3 mx-3">
+
+
+                                </div>
                             </div>
                             <!-- activity body -->
                             <div></div>

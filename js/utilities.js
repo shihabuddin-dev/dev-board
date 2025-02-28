@@ -16,7 +16,20 @@ function updateDate() {
 }
 updateDate();
 
-// disable buttons 
+// Times format hours minutes seconds
+function getFormattedTime() {
+    const now = new Date();
+    let hours = now.getHours();
+    const minutes = now.getMinutes();
+    const seconds = now.getSeconds();
+    const amAndPm = hours >= 12 ? "PM" : "AM";
+
+    hours = hours % 12 || 12;
+
+    return `at ${hours}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")} ${amAndPm}`;
+}
+
+// disable buttons (Use one times)
 function disableButton(button) {
     button.disabled = true;
     button.classList.add("bg-gray-400", "cursor-not-allowed");
@@ -28,3 +41,17 @@ function getTextValueById(id) {
     const convertedTextValue = parseInt(textValue);
     return convertedTextValue;
 }
+
+// Just inner text 
+function getTextById(id) {
+    const onlyText = document.getElementById(id).innerText;
+    return onlyText;
+}
+// Clear History 
+function clearHistory() {
+    document.getElementById("logContainer").innerHTML = "";
+}
+
+
+
+
