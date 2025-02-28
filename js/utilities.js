@@ -53,5 +53,10 @@ function clearHistory() {
 }
 
 
+document.getElementById('discover').addEventListener('click', function(){
+    window.location.href='blog.html'
+})
 
-
+document.getElementById('back-home').addEventListener('click', function(){
+    window.location.href='./index.html'
+})
