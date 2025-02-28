@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev Board</title>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <!-- Custom css  -->
+    <link rel="stylesheet" href="style.css">
+    <!-- daisy ui and tailwind cdn  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
 </head>
-<body>
-    <p>hi</p>
+
+<body class="poppins-font container mx-auto bg-[#F4F7FF] min-h-screen">
+    <!-- navbar  -->
+    <nav class="flex justify-between mx-2 md:mx-4 py-2 md:py-6 px-2 md:px-6 bg-white  rounded-xl">
+        <!-- nav left  -->
+        <div class="flex gap-2 md:gap-3 items-center">
+            <img class="w-10 md:w-14 h-10 md:h-14" src="assets/logo.svg" alt="this is logo">
+            <h1 class="text-xl md:text-4xl">Dev <span class="font-bold">Board</span></h1>
+        </div>
+        <!-- nav right  -->
+        <div class="flex gap-2 md:gap-6 items-center">
+            <div class="flex gap-2 items-center bg-[#F4F7FF] p-1 md:p-3 rounded-3xl">
+                <img class="w-5 md:w-8 h-8 md:h-8" src="assets/check.svg" alt="">
+                <span class="text-lg md:text-3xl font-bold">23</span>
+            </div>
+            <img class="w-8 md:w-14 h-8 md:h-14" src="assets/theme.svg" alt="this is logo">
+        </div>
+
+    </nav>
+
     <script src="js/utilities.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>
