@@ -18,6 +18,13 @@ updateDate();
 
 // disable buttons 
 function disableButton(button) {
-    button.disabled = true; 
+    button.disabled = true;
     button.classList.add("bg-gray-400", "cursor-not-allowed");
+}
+
+// converted number 
+function getTextValueById(id) {
+    const textValue = document.getElementById(id).innerText;
+    const convertedTextValue = parseInt(textValue);
+    return convertedTextValue;
 }

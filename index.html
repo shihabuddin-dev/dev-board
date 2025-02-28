@@ -55,7 +55,7 @@
                             </div>
                             <div class="">
                                 <p>Task Assigned</p>
-                                <h3 class="text-[#00303C] text-2xl md:text-3xl font-bold">05</h3>
+                                <h3 id="pending-task" class="text-[#00303C] text-2xl md:text-3xl font-bold">6</h3>
                             </div>
                         </div>
                         <!-- discover -->
@@ -78,34 +78,136 @@
 
                     </div>
 
-                    <!-- All card -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-6 px-6 mt-5 md:mt-8">
-                        <!-- single card -->
+                    <!-- task body  All Card -->
+                    <div class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-5 px-6 mt-5 md:mt-8">
+                        <!-- single card (Fix Mobile Button Issue)-->
                         <div class="bg-[#F4F7FF] p-6 rounded-xl space-y-4">
                             <span
                                 class="tag bg-white px-4 py-2 rounded-lg text-base font-normal text-[#00303C]">ShopEase</span>
                             <h3 class="text-2xl font-medium text-[#00303C] mt-4">Fix Mobile Button Issue</h3>
                             <div class="bg-white p-4 rounded-xl">
-                                <p class="text-base font-normal">Debug using Chrome DevTools, check for overlapping
-                                    elements, and ensure onClick works properly
-                                    and ensure onClick works properly</p>
+                                <p class="text-base font-normal">The mobile button was unresponsive due to a JavaScript
+                                    event listener issue, requiring a quick fix to ensure seamless user interaction
+                                    across all devices.</p>
                             </div>
-                            <div class="flex justify-between items-center border-t border-dashed pt-4">
+                            <div
+                                class="flex lg:flex-col xl:flex-row space-y-2 justify-between items-center border-t border-dashed pt-4">
+                                <div>
+                                    <h4 class="text-sm font-normal text-[#00303C]">Deadline</h4>
+                                    <h3 class="text-base font-normal text-[#00303C]">10 March 2025</h3>
+                                </div>
+                                <button id="actionBtn" onclick="disableButton(this)"
+                                    class="btn btn-mobile text-white text-base rounded-md bg-[#3752FD]">Completed</button>
+                            </div>
+                        </div>
+                        <!-- single card (Add Dark Mode)-->
+                        <div class="bg-[#F4F7FF] p-6 rounded-xl space-y-4">
+                            <span
+                                class="tag bg-white px-4 py-2 rounded-lg text-base font-normal text-[#00303C]">CloudSync</span>
+                            <h3 class="text-2xl font-medium text-[#00303C] mt-4">Add Dark Mode</h3>
+                            <div class="bg-white p-4 rounded-xl">
+                                <p class="text-base font-normal">Implementing a dark mode feature enhances user
+                                    experience by reducing eye strain, improving readability, and providing a sleek,
+                                    modern interface with a simple toggle switch.</p>
+                            </div>
+                            <div
+                                class="flex lg:flex-col xl:flex-row space-y-2 justify-between items-center border-t border-dashed pt-4">
+                                <div>
+                                    <h4 class="text-sm font-normal text-[#00303C]">Deadline</h4>
+                                    <h3 class="text-base font-normal text-[#00303C]">15 March 2025</h3>
+                                </div>
+                                <button id="actionBtn" onclick="disableButton(this)"
+                                    class="btn btn-dark text-white text-base rounded-md bg-[#3752FD]">Completed</button>
+                            </div>
+                        </div>
+                        <!-- single card (Optimize  Home page )-->
+                        <div class="bg-[#F4F7FF] p-6 rounded-xl space-y-4">
+                            <span
+                                class="tag bg-white px-4 py-2 rounded-lg text-base font-normal text-[#00303C]">SwiftPay</span>
+                            <h3 class="text-2xl font-medium text-[#00303C] mt-4">Optimize Home page</h3>
+                            <div class="bg-white p-4 rounded-xl">
+                                <p class="text-base font-normal">Enhancing the home page improves loading speed, user
+                                    engagement, and accessibility by optimizing images, reducing unused scripts, and
+                                    refining the layout.</p>
+                            </div>
+                            <div
+                                class="flex lg:flex-col xl:flex-row space-y-2 justify-between items-center border-t border-dashed pt-4">
+                                <div>
+                                    <h4 class="text-sm font-normal text-[#00303C]">Deadline</h4>
+                                    <h3 class="text-base font-normal text-[#00303C]">17 March 2025</h3>
+                                </div>
+                                <button id="actionBtn" onclick="disableButton(this)"
+                                    class="btn btn-dark btn-optimize text-white text-base rounded-md bg-[#3752FD]">Completed</button>
+                            </div>
+                        </div>
+                        <!-- single card (Add new emoji 🤲)-->
+                        <div class="bg-[#F4F7FF] p-6 rounded-xl space-y-4">
+                            <span
+                                class="tag bg-white px-4 py-2 rounded-lg text-base font-normal text-[#00303C]">Meta</span>
+                            <h3 class="text-2xl font-medium text-[#00303C] mt-4">Add new emoji 🤲</h3>
+                            <div class="bg-white p-4 rounded-xl">
+                                <p class="text-base font-normal">Integrating new emojis enhances user interaction,
+                                    making conversations more expressive, engaging, and visually appealing across
+                                    various digital platforms.</p>
+                            </div>
+                            <div
+                                class="flex lg:flex-col xl:flex-row space-y-2 justify-between items-center border-t border-dashed pt-4">
+                                <div>
+                                    <h4 class="text-sm font-normal text-[#00303C]">Deadline</h4>
+                                    <h3 class="text-base font-normal text-[#00303C]">18 March 2025</h3>
+                                </div>
+                                <button id="actionBtn" onclick="disableButton(this)"
+                                    class="btn btn-emoji text-white text-base rounded-md bg-[#3752FD]">Completed</button>
+                            </div>
+                        </div>
+                        <!-- single card (Integrate OpenAI API )-->
+                        <div class="bg-[#F4F7FF] p-6 rounded-xl space-y-4">
+                            <span
+                                class="tag bg-white px-4 py-2 rounded-lg text-base font-normal text-[#00303C]">GoogleLLC</span>
+                            <h3 class="text-2xl font-medium text-[#00303C] mt-4">Integrate OpenAI API</h3>
+                            <div class="bg-white p-4 rounded-xl">
+                                <p class="text-base font-normal">Integrating the OpenAI API enables AI-powered features,
+                                    enhancing automation, natural language processing, and interactive user experiences.
+                                </p>
+                            </div>
+                            <div
+                                class="flex lg:flex-col xl:flex-row space-y-2 justify-between items-center border-t border-dashed pt-4">
+                                <div>
+                                    <h4 class="text-sm font-normal text-[#00303C]">Deadline</h4>
+                                    <h3 class="text-base font-normal text-[#00303C]">19 March 2025</h3>
+                                </div>
+                                <button id="actionBtn" onclick="disableButton(this)"
+                                    class="btn btn-ai text-white text-base rounded-md bg-[#3752FD]">Completed</button>
+                            </div>
+                        </div>
+                        <!-- single card (Improve Job Seeking )-->
+                        <div class="bg-[#F4F7FF] p-6 rounded-xl space-y-4">
+                            <span
+                                class="tag bg-white px-4 py-2 rounded-lg text-base font-normal text-[#00303C]">GlassDoar</span>
+                            <h3 class="text-2xl font-medium text-[#00303C] mt-4">Improve Job Seeking</h3>
+                            <div class="bg-white p-4 rounded-xl">
+                                <p class="text-base font-normal">Finding a developer job requires a strong portfolio,
+                                    networking, and consistently applying to opportunities on job platforms,company,
+                                    aboard and websites.</p>
+                            </div>
+                            <div
+                                class="flex lg:flex-col xl:flex-row space-y-2 justify-between items-center border-t border-dashed pt-4">
                                 <div>
                                     <h4 class="text-sm font-normal text-[#00303C]">Deadline</h4>
                                     <h3 class="text-base font-normal text-[#00303C]">21 March 2025</h3>
                                 </div>
                                 <button id="actionBtn" onclick="disableButton(this)"
-                                    class="btn text-white text-base rounded-md bg-[#3752FD]">Completed</button>
+                                    class="btn btn-job text-white text-base rounded-md bg-[#3752FD]">Completed</button>
                             </div>
                         </div>
+
 
                     </div>
                 </section>
 
                 <!-- Right aside -->
                 <section>
-                    <aside class="bg-white py-5 rounded-xl">
+                    <aside class="bg-white py-5 rounded-xl h-full">
                         <div>
                             <!-- activity head -->
                             <div class=" border-b-2 border-[#3752FD33] border-dashed pb-5 space-y-5 text-center">
