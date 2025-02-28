@@ -15,23 +15,77 @@
 </head>
 
 <body class="poppins-font container mx-auto bg-[#F4F7FF] min-h-screen">
+
     <!-- navbar  -->
-    <nav class="flex justify-between mx-2 md:mx-4 py-2 md:py-6 px-2 md:px-6 bg-white  rounded-xl">
+    <nav class="flex justify-between mx-2 md:mx-6 py-2 md:py-6 px-2 md:px-6 bg-white  rounded-xl md:rounded-3xl">
         <!-- nav left  -->
         <div class="flex gap-2 md:gap-3 items-center">
             <img class="w-10 md:w-14 h-10 md:h-14" src="assets/logo.svg" alt="this is logo">
-            <h1 class="text-xl md:text-4xl">Dev <span class="font-bold">Board</span></h1>
+            <h1 class="text-xl md:text-4xl">Dev<span class="font-bold">Board</span></h1>
         </div>
         <!-- nav right  -->
         <div class="flex gap-2 md:gap-6 items-center">
-            <div class="flex gap-2 items-center bg-[#F4F7FF] p-1 md:p-3 rounded-3xl">
-                <img class="w-5 md:w-8 h-8 md:h-8" src="assets/check.svg" alt="">
+            <div class="flex gap-2 items-center bg-[#F4F7FF] p-1 md:py-3 md:px-4 rounded-4xl">
+                <img class="w-5 md:w-7 h-8 md:h-8" src="assets/check.svg" alt="">
                 <span class="text-lg md:text-3xl font-bold">23</span>
             </div>
             <img class="w-8 md:w-14 h-8 md:h-14" src="assets/theme.svg" alt="this is logo">
         </div>
 
     </nav>
+
+    <!-- main section  -->
+    <main class="grid md:grid-cols-4 gap-4 p-4 md:p-6 mt-4 md:mt-5 bg-white mx-2 md:mx-6">
+        <!-- main design  -->
+        <section class="col-span-3">
+            <!-- main header card -->
+            <div class="grid md:grid-cols-4 gap-3 md:gap-5">
+                <!-- task assign card  -->
+                <div class="bg-[#F4F7FF] flex items-center gap-3 md:gap-5 px-2 md:px-4 py-2 md:py-8 rounded-xl">
+                    <div class="h-12 md:h-16 w-12 md:w-16 p-4 rounded-full bg-white">
+                        <img class="mx-auto" class="mx-auto" src="assets/check.svg" alt="">
+                    </div>
+                    <div>
+                        <p class="font-medium">Task Assigned</p>
+                        <h2 class="text-base md:text-3xl font-bold">06</h2>
+                    </div>
+                </div>
+                <!-- Discover Something New Today! card  -->
+                <div
+                    class="bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8]  flex items-center gap-2 md:gap-12 px-2 md:px-10 py-2 md:py-8 rounded-xl md:col-span-2">
+                    <div>
+                        <img class="h-10 md:h-20 w-10 md:w-20" src="assets/board.svg" alt="">
+                    </div>
+                    <div>
+                        <h2 class="text-base text-white md:text-2xl font-medium">Discover Something <br> New Today!</h2>
+                    </div>
+                </div>
+                <!-- date times card  -->
+                <div class="bg-[#F4F7FF] flex items-center gap-3 md:gap-5 px-2 md:px-4 py-2 md:py-8 rounded-xl">
+                    <div class="rounded-full bg-white">
+                        <img class="h-12 md:h-16 w-12 md:w-16" class="mx-auto" src="assets/calender.svg" alt="">
+                    </div>
+                    <div>
+                        <p class="text-base md:text-[22px] font-medium">Wed,</p>
+                        <h2 class="text-base md:text-[22px] font-bold">Feb 28 2025</h2>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+        </section>
+        <!-- activity log  -->
+        <section class="">
+
+        </section>
+    </main>
+
+
+
+
 
     <script src="js/utilities.js"></script>
     <script src="js/main.js"></script>
