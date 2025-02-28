@@ -52,11 +52,7 @@ function clearHistory() {
     document.getElementById("logContainer").innerHTML = "";
 }
 
-
-document.getElementById('discover').addEventListener('click', function(){
-    window.location.href='blog.html'
-})
-
-document.getElementById('back-home').addEventListener('click', function(){
-    window.location.href='./index.html'
+// Linked in blog pages 
+document.getElementById('discover').addEventListener('click', function () {
+    window.location.href = 'blog.html'
 })

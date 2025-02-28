@@ -116,8 +116,18 @@ document.querySelector('.btn-job').addEventListener('click', function () {
 
 })
 
+// Final Alert 
+document.querySelector('.btn-mobile').addEventListener('click', taskCompleted);
+document.querySelector('.btn-dark').addEventListener('click', taskCompleted);
+document.querySelector('.btn-optimize').addEventListener('click', taskCompleted);
+document.querySelector('.btn-emoji').addEventListener('click', taskCompleted);
+document.querySelector('.btn-ai').addEventListener('click', taskCompleted);
+document.querySelector('.btn-job').addEventListener('click', taskCompleted);
 
-
-// New History 
-
-
+let taskCount = 0;
+function taskCompleted() {
+    taskCount++;
+    if (taskCount === 6) {
+        alert('Congratulations!! You have completed all the current tasks.');
+    }
+}
