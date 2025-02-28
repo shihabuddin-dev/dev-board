@@ -1,91 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dev Board</title>
-    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
-    <!-- Custom css  -->
-    <link rel="stylesheet" href="style.css">
-    <!-- daisy ui and tailwind cdn  -->
+    <title>Dev Board | Dashboard</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
-<body class="poppins-font container mx-auto bg-[#F4F7FF] min-h-screen">
+<body class="bg-[#F4F7FF] h-screen font-poppins">
 
-    <!-- navbar  -->
-    <nav class="flex justify-between mx-2 md:mx-6 py-2 md:py-6 px-2 md:px-6 bg-white  rounded-xl md:rounded-3xl">
-        <!-- nav left  -->
-        <div class="flex gap-2 md:gap-3 items-center">
-            <img class="w-10 md:w-14 h-10 md:h-14" src="assets/logo.svg" alt="this is logo">
-            <h1 class="text-xl md:text-4xl">Dev<span class="font-bold">Board</span></h1>
-        </div>
-        <!-- nav right  -->
-        <div class="flex gap-2 md:gap-6 items-center">
-            <div class="flex gap-2 items-center bg-[#F4F7FF] p-1 md:py-3 md:px-4 rounded-4xl">
-                <img class="w-5 md:w-7 h-8 md:h-8" src="assets/check.svg" alt="">
-                <span class="text-lg md:text-3xl font-bold">23</span>
+    <!-- header section  navbar-->
+    <header class="py-3 container mx-auto">
+        <nav class="py-3 px-4 bg-base-100 shadow-xs mx-auto rounded-xl flex justify-between items-center">
+            <!-- Nav left  -->
+            <div class="flex gap-2 md:gap-3 items-center">
+                <div class="">
+                    <img class="w-6 sm:w-8 md:w-10" src="./assets/logo.svg" alt="logo">
+                </div>
+                <h3 class="sm:text-2xl md:text-3xl">Dev<span class="font-bold">Board</span></h3>
             </div>
-            <img class="w-8 md:w-14 h-8 md:h-14" src="assets/theme.svg" alt="this is logo">
-        </div>
-
-    </nav>
+            <!-- Nav Right  -->
+            <div class="flex gap-4 md:gap-8 ">
+                <div class="flex items-center gap-x-3 px-5 bg-[#F4F7FF] rounded-full">
+                    <img class="w-4 h-4 md:w-6 md:h-6" src="./assets/checkbox.svg" alt="checkbox">
+                    <span id="completed-task" class="sm:text-2xl md:text-3xl font-bold">23</span>
+                </div>
+                <div id="theme-btn" class="flex cursor-pointer items-center gap-3 p-3 md:p-4 bg-[#F4F7FF] rounded-full">
+                    <img class="sm:w-6 h-6 md:h-10 md:w-10 active:animate-spin" src="./assets/theme-btn.svg" alt="">
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <!-- main section  -->
-    <main class="grid md:grid-cols-4 gap-4 p-4 md:p-6 mt-4 md:mt-5 bg-white mx-2 md:mx-6">
-        <!-- main design  -->
-        <section class="col-span-3">
-            <!-- main header card -->
-            <div class="grid md:grid-cols-4 gap-3 md:gap-5">
-                <!-- task assign card  -->
-                <div class="bg-[#F4F7FF] flex items-center gap-3 md:gap-5 px-2 md:px-4 py-2 md:py-8 rounded-xl">
-                    <div class="h-12 md:h-16 w-12 md:w-16 p-4 rounded-full bg-white">
-                        <img class="mx-auto" class="mx-auto" src="assets/check.svg" alt="">
+    <main>
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+                <!-- left -->
+                <section class="col-span-3 bg-white py-6 rounded-xl">
+                    <!-- task head -->
+                    <div
+                        class="grid lg:grid-cols-4 grid-cols-1 gap-6 border-b-2 border-[#3752FD33] border-dashed pb-5 px-6">
+                        <!-- task assigned -->
+                        <div
+                            class="bg-[#F4F7FF] pl-2 py-4 rounded-xl flex justify-start md:justify-evenly items-center">
+                            <div class="h-16 w-16 rounded-full bg-white flex items-center justify-center"><img
+                                    src="assets/checkbox.svg" alt="checkbox"></div>
+                            <div class="">
+                                <p>Task Assigned</p>
+                                <h3 class="text-[#00303C] text-3xl font-bold">05</h3>
+                            </div>
+                        </div>
+                        <!-- discover -->
+                        <div
+                            class="col-span-2 bg-linear-to-r from-[#3752FD] to-[#9BA8F8] rounded-xl flex justify-start items-center gap-6 pl-6 py-6">
+                            <img src="assets/board.svg" alt="">
+                            <h3 class="text-2xl font-semibold text-white">Discover Something <br> New Today!</h3>
+                        </div>
+                        <!-- calendar date  -->
+                        <div
+                            class="bg-[#F4F7FF] pl-2 py-4 px-3 rounded-xl flex justify-start md:justify-evenly items-center">
+                            <div class="h-16 w-16 rounded-full bg-white flex items-center justify-center"><img
+                                    src="assets/calender.svg" alt="checkbox"></div>
+                            <div class="">
+                                <p>Wed,</p>
+                                <h3 class="text-[#00303C] text-xl font-bold">Jul 28 2025</h3>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <p class="font-medium">Task Assigned</p>
-                        <h2 class="text-base md:text-3xl font-bold">06</h2>
-                    </div>
-                </div>
-                <!-- Discover Something New Today! card  -->
-                <div
-                    class="bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8]  flex items-center gap-2 md:gap-12 px-2 md:px-10 py-2 md:py-8 rounded-xl md:col-span-2">
-                    <div>
-                        <img class="h-10 md:h-20 w-10 md:w-20" src="assets/board.svg" alt="">
-                    </div>
-                    <div>
-                        <h2 class="text-base text-white md:text-2xl font-medium">Discover Something <br> New Today!</h2>
-                    </div>
-                </div>
-                <!-- date times card  -->
-                <div class="bg-[#F4F7FF] flex items-center gap-3 md:gap-5 px-2 md:px-4 py-2 md:py-8 rounded-xl">
-                    <div class="rounded-full bg-white">
-                        <img class="h-12 md:h-16 w-12 md:w-16" class="mx-auto" src="assets/calender.svg" alt="">
-                    </div>
-                    <div>
-                        <p class="text-base md:text-[22px] font-medium">Wed,</p>
-                        <h2 class="text-base md:text-[22px] font-bold">Feb 28 2025</h2>
-                    </div>
-                </div>
+                    <!-- task body -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-9 px-6">
+                        <!-- single card -->
+                        <div class="bg-[#F4F7FF] p-6 rounded-xl space-y-4 mt-4">
+                            <span
+                                class="tag bg-white px-4 py-2 rounded-lg text-base font-normal text-[#00303C]">ShopEase</span>
+                            <h3 class="text-2xl font-medium text-[#00303C] mt-4">Fix Mobile Button Issue</h3>
+                            <div class="bg-white p-4 rounded-xl">
+                                <p class="text-base font-normal">Debug using Chrome DevTools, check for overlapping
+                                    elements, and ensure onClick works properly
+                                    and ensure onClick works properly</p>
+                            </div>
+                            <div class="flex justify-between items-center border-t border-dashed pt-4">
+                                <div>
+                                    <h4 class="text-sm font-normal text-[#00303C]">Deadline</h4>
+                                    <h3 class="text-base font-normal text-[#00303C]">21 March 2025</h3>
+                                </div>
+                                <button class="btn text-white text-base rounded-md bg-[#3752FD]">Completed</button>
+                            </div>
+                        </div>
 
 
 
+                    </div>
+                </section>
+
+                <!-- Right aside -->
+                <section>
+                    <aside class="bg-white py-5 rounded-xl">
+                        <div>
+                            <!-- activity head -->
+                            <div class=" border-b-2 border-[#3752FD33] border-dashed pb-5 space-y-5 text-center">
+                                <div class="flex gap-3 justify-center">
+                                    <img src="assets/activity.svg" alt="activity icon">
+                                    <h4 class="">Activity Log</h4>
+                                </div>
+                                <div><button class="btn text-white text-base rounded-md bg-[#3752FD]">Clear
+                                        History</button></div>
+                            </div>
+                            <!-- activity body -->
+                            <div></div>
+                        </div>
+                    </aside>
+                </section>
             </div>
-
-
-        </section>
-        <!-- activity log  -->
-        <section class="">
-
-        </section>
+        </div>
     </main>
-
-
-
-
 
     <script src="js/utilities.js"></script>
     <script src="js/main.js"></script>
