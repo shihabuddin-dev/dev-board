@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
-<body class="bg-[#F4F7FF] h-screen font-poppins">
+<body id="body" class="bg-[#F4F7FF] h-screen font-poppins">
 
     <!-- header section  navbar-->
     <header class="py-3 container mx-auto">
@@ -19,17 +19,18 @@
             <!-- Nav left  -->
             <div class="flex gap-2 md:gap-3 items-center">
                 <div class="">
-                    <img class="w-6 sm:w-8 md:w-10" src="./assets/logo.svg" alt="logo">
+                    <img class="w-8 md:w-10" src="./assets/logo.svg" alt="logo">
                 </div>
-                <h3 class="sm:text-2xl md:text-3xl">Dev<span class="font-bold">Board</span></h3>
+                <h3 class="text-xl sm:text-2xl md:text-3xl">Dev<span class="font-bold">Board</span></h3>
             </div>
             <!-- Nav Right  -->
-            <div class="flex gap-4 md:gap-8 ">
-                <div class="flex items-center gap-x-3 px-5 bg-[#F4F7FF] rounded-full">
+            <div class="flex gap-2 md:gap-8 ">
+                <div class="flex items-center gap-x-3 px-2 md:px-4  bg-[#F4F7FF] rounded-full">
                     <img class="w-4 h-4 md:w-6 md:h-6" src="./assets/checkbox.svg" alt="checkbox">
-                    <span id="completed-task" class="sm:text-2xl md:text-3xl font-bold">23</span>
+                    <span id="completed-task" class="text-xl sm:text-2xl md:text-3xl font-bold">23</span>
                 </div>
-                <div id="theme-btn" class="flex cursor-pointer items-center gap-3 p-3 md:p-4 bg-[#F4F7FF] rounded-full">
+                <div onclick="changeBgColor()"
+                    class="flex cursor-pointer items-center gap-3 p-3 md:p-4 bg-[#F4F7FF] rounded-full">
                     <img class="sm:w-6 h-6 md:h-10 md:w-10 active:animate-spin" src="./assets/theme-btn.svg" alt="">
                 </div>
             </div>
@@ -44,38 +45,43 @@
                 <section class="col-span-3 bg-white py-6 rounded-xl">
                     <!-- task head -->
                     <div
-                        class="grid lg:grid-cols-4 grid-cols-1 gap-6 border-b-2 border-[#3752FD33] border-dashed pb-5 px-6">
+                        class="grid lg:grid-cols-4 grid-cols-1 gap-4 border-b-2 border-[#3752FD33] border-dashed pb-5 px-6 md:pb-8">
                         <!-- task assigned -->
                         <div
-                            class="bg-[#F4F7FF] pl-2 py-4 rounded-xl flex justify-start md:justify-evenly items-center">
-                            <div class="h-16 w-16 rounded-full bg-white flex items-center justify-center"><img
-                                    src="assets/checkbox.svg" alt="checkbox"></div>
+                            class="bg-[#F4F7FF] px-4 md:px-0  py-4 rounded-xl flex gap-6 sm:gap-0 justify-start md:justify-evenly items-center">
+                            <div
+                                class="h-10 md:h-16 w-10 md:w-16 rounded-full bg-white flex items-center justify-center">
+                                <img src="assets/checkbox.svg" alt="checkbox">
+                            </div>
                             <div class="">
                                 <p>Task Assigned</p>
-                                <h3 class="text-[#00303C] text-3xl font-bold">05</h3>
+                                <h3 class="text-[#00303C] text-2xl md:text-3xl font-bold">05</h3>
                             </div>
                         </div>
                         <!-- discover -->
                         <div
-                            class="col-span-2 bg-linear-to-r from-[#3752FD] to-[#9BA8F8] rounded-xl flex justify-start items-center gap-6 pl-6 py-6">
-                            <img src="assets/board.svg" alt="">
-                            <h3 class="text-2xl font-semibold text-white">Discover Something <br> New Today!</h3>
+                            class="md:col-span-2 bg-linear-to-r from-[#3752FD] to-[#9BA8F8] rounded-xl flex justify-start items-center gap-6 pl-6 py-6">
+                            <img class="h-10 md:h-20 w-10 md:w-20" src="assets/board.svg" alt="">
+                            <h3 class="text-base md:text-2xl font-semibold text-white">Discover Something <br> New
+                                Today!</h3>
                         </div>
                         <!-- calendar date  -->
                         <div
-                            class="bg-[#F4F7FF] pl-2 py-4 px-3 rounded-xl flex justify-start md:justify-evenly items-center">
+                            class="bg-[#F4F7FF] pl-2 py-4 px-3 rounded-xl flex gap-6 md:gap-2 justify-start md:justify-evenly items-center">
                             <div class="h-16 w-16 rounded-full bg-white flex items-center justify-center"><img
                                     src="assets/calender.svg" alt="checkbox"></div>
                             <div class="">
-                                <p>Wed,</p>
-                                <h3 class="text-[#00303C] text-xl font-bold">Jul 28 2025</h3>
+                                <p id="day">Wed,</p>
+                                <h3 id="date" class="text-[#00303C] text-xl font-bold"></h3>
                             </div>
                         </div>
+
                     </div>
-                    <!-- task body -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-9 px-6">
+
+                    <!-- All card -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-6 px-6 mt-5 md:mt-8">
                         <!-- single card -->
-                        <div class="bg-[#F4F7FF] p-6 rounded-xl space-y-4 mt-4">
+                        <div class="bg-[#F4F7FF] p-6 rounded-xl space-y-4">
                             <span
                                 class="tag bg-white px-4 py-2 rounded-lg text-base font-normal text-[#00303C]">ShopEase</span>
                             <h3 class="text-2xl font-medium text-[#00303C] mt-4">Fix Mobile Button Issue</h3>
@@ -89,11 +95,10 @@
                                     <h4 class="text-sm font-normal text-[#00303C]">Deadline</h4>
                                     <h3 class="text-base font-normal text-[#00303C]">21 March 2025</h3>
                                 </div>
-                                <button class="btn text-white text-base rounded-md bg-[#3752FD]">Completed</button>
+                                <button id="actionBtn" onclick="disableButton(this)"
+                                    class="btn text-white text-base rounded-md bg-[#3752FD]">Completed</button>
                             </div>
                         </div>
-
-
 
                     </div>
                 </section>
@@ -119,6 +124,8 @@
             </div>
         </div>
     </main>
+
+
 
     <script src="js/utilities.js"></script>
     <script src="js/main.js"></script>
