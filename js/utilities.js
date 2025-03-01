@@ -4,13 +4,11 @@ function changeBgColor() {
     document.getElementById("body").style.backgroundColor = randomColor;
 }
 
-
 // Auto day and Date Update
 function updateDate() {
     const today = new Date();
     const options = { weekday: 'long', month: 'short', day: 'numeric', year: 'numeric' };
     const formattedDate = today.toLocaleDateString('en-US', options).split(',');
-
     document.getElementById('day').innerText = formattedDate[0] + ",";
     document.getElementById('date').innerText = formattedDate[1] + formattedDate[2];
 }
@@ -23,13 +21,11 @@ function getFormattedTime() {
     const minutes = now.getMinutes();
     const seconds = now.getSeconds();
     const amAndPm = hours >= 12 ? "PM" : "AM";
-
     hours = hours % 12 || 12;
-
     return `at ${hours}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")} ${amAndPm}`;
 }
 
-// disable buttons (Use one times)
+// disable buttons (One time Use)
 function disableButton(button) {
     button.disabled = true;
     button.classList.add("bg-gray-400", "cursor-not-allowed");
@@ -42,7 +38,7 @@ function getTextValueById(id) {
     return convertedTextValue;
 }
 
-// Just inner text 
+//  Get Just inner text 
 function getTextById(id) {
     const onlyText = document.getElementById(id).innerText;
     return onlyText;

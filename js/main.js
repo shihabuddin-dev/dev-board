@@ -12,7 +12,7 @@ document.querySelector('.btn-mobile').addEventListener('click', function () {
     const newDiv = document.createElement('div');
     newDiv.innerHTML = `
     <div class="bg-[#3752FD33] px-2 py-3 rounded-md">
-    <p class="text-sm">You have Complete The Task: ${mobileText} at ${getFormattedTime()}</p> </div>
+    <p class="text-sm">You have Complete The Task: ${mobileText} ${getFormattedTime()}</p> </div>
     `;
     newHistory.appendChild(newDiv);
 
